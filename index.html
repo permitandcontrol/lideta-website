@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lideta Subcity Building Permit & Control Office</title>
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; background: #eef2f7; }
+
+    nav {
+      background: #1446a0;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+      position: sticky;
+      top: 0;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo img {
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    nav h2 {
+      font-size: 20px;
+      margin: 0;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .lang-btn {
+      background: white;
+      color: #1446a0;
+      padding: 6px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1350&q=80') no-repeat center/cover;
+      color: white;
+      text-align: center;
+      padding: 120px 20px;
+    }
+
+    .hero h1 { font-size: 40px; margin-bottom: 15px; text-shadow: 2px 2px 5px black; }
+    .hero p {
+      font-size: 20px;
+      background: rgba(0,0,0,0.55);
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+
+    section {
+      background: white;
+      max-width: 1100px;
+      margin: 30px auto;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    h2 { color: #1446a0; margin-bottom: 20px; font-size: 26px; }
+    p, li { font-size: 18px; line-height: 1.7; }
+    ul { margin-left: 20px; }
+
+    footer {
+      background: #1446a0;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      nav ul { display: none; }
+      nav h2 { font-size: 16px; }
+      .logo img { width: 40px; height: 40px; }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAVIGATION WITH LOGO -->
+<nav>
+  <div class="logo">
+    <img src="logo.png" alt="Office Logo">
+    <h2 id="title-en">Lideta Building Office</h2>
+    <h2 id="title-am" style="display:none;">የልደታ ክ/ከተማ ሕንፃ ፍቃድና ቁጥጥር ቢሮ</h2>
+  </div>
+
+  <ul>
+    <li><a href="#about" id="nav-about-en">About</a></li>
+    <li><a href="#services" id="nav-services-en">Services</a></li>
+    <li><a href="#contact" id="nav-contact-en">Contact</a></li>
+
+    <li><a href="#about" id="nav-about-am" style="display:none;">ስለ ቢሮው</a></li>
+    <li><a href="#services" id="nav-services-am" style="display:none;">አገልግሎቶች</a></li>
+    <li><a href="#contact" id="nav-contact-am" style="display:none;">ያግኙን</a></li>
+  </ul>
+
+  <button class="lang-btn" onclick="toggleLanguage()">EN / አማ</button>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <h1 id="hero-en">Welcome to Lideta Subcity Building Permit and Control Office</h1>
+  <h1 id="hero-am" style="display:none;">እንኳን ወደ ልደታ ክ/ከተማ ሕንፃ ፍቃድና ቁጥጥር ቢሮ በደህና መጡ</h1>
+
+  <p id="hero-sub-en">Ensuring safe, compliant, and standardized construction in Lideta Subcity.</p>
+  <p id="hero-sub-am" style="display:none;">በልደታ ክ/ከተማ ውስጥ ደህንነታዊ እና ከመስፈርት ጋር ተዛመዱ ሕንፃዎችን መገንባትን እንደግፋለን።</p>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2 id="about-en">About the Office</h2>
+  <h2 id="about-am" style="display:none;">ስለ ቢሮው</h2>
+
+  <p id="about-text-en">
+    Lideta Subcity Building Permit and Control Office oversees construction activities, 
+    ensures compliance with city standards, and promotes safe and sustainable building practices.
+  </p>
+
+  <p id="about-text-am" style="display:none;">
+    የልደታ ክ/ከተማ ሕንፃ ፍቃድና ቁጥጥር ቢሮ የህንፃ ስራዎችን በመቆጣጠር ከመስፈርቶች ጋር ተዛመዱ መሆናቸውን ያረጋግጣል።
+  </p>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <h2 id="services-en">Our Services</h2>
+  <h2 id="services-am" style="display:none;">አገልግሎቶች</h2>
+
+  <ul id="services-list-en">
+    <li>Building Authentication</li>
+    <li>Construction Inspection</li>
+    <li>Construction Control and Regulation</li>
+    <li>Advertising Inspection</li>
+    <li>Standardization & Compliance Enforcement</li>
+  </ul>
+
+  <ul id="services-list-am" style="display:none;">
+    <li>የሕንፃ ማረጋገጫ</li>
+    <li>የህንፃ ምርመራ</li>
+    <li>የህንፃ ቁጥጥር</li>
+    <li>የማስታወቂያ ተቆጣጣሪነት</li>
+    <li>መደበኛነትና ተዛመድ</li>
+  </ul>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2 id="contact-en">Contact Information</h2>
+  <h2 id="contact-am" style="display:none;">ያግኙን</h2>
+
+  <p id="contact-text-en">
+    <strong>Email:</strong> lidetabuildingpermit@gmail.com<br>
+    <strong>Office Address:</strong> Lideta Subcity Building, Second Floor
+  </p>
+
+  <p id="contact-text-am" style="display:none;">
+    <strong>ኢሜይል:</strong> lidetabuildingpermit@gmail.com<br>
+    <strong>አድራሻ:</strong> የልደታ ክ/ከተማ ህንፃ፣ ሁለተኛ ፎቅ
+  </p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  © 2025 Lideta Subcity Building Permit & Control Office — መብቱ የተጠበቀ ነው
+</footer>
+
+<!-- LANGUAGE TOGGLE JS -->
+<script>
+  function toggleLanguage() {
+    const english = document.querySelectorAll('[id$="-en"]');
+    const amharic = document.querySelectorAll('[id$="-am"]');
+
+    english.forEach(e => e.style.display = e.style.display === "none" ? "block" : "none");
+    amharic.forEach(a => a.style.display = a.style.display === "none" ? "block" : "none");
+  }
+</script>
+
+</body>
+</html>
